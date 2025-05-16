@@ -8,13 +8,13 @@ from matplotlib.pyplot import title
 
 cwd = 'D:\Python_Projects\SumPlot'
 sys.path.append(cwd)# from MyPlotExt import myplotext
-from main import  myplotext
+from old.RFPlot_10_04_2025 import  myplotext
 # from main_13_01_2025 import myplotext
 
 
 # Updated to plot all files inside a folder since 2.0.1
-plot_path = 'D:\Python_Projects\SumPlot'
+plot_path = 'E:\data'
 
-myplotext(file_path=plot_path,sheet_key='BT_RX',section_key=['rate','ant','PktType','DataPattern','PktLength','PktNum','sc_mode','sc_pll_ldo_trim','forceAGC_idx'],\
-linex=[[-18,10],[-18,10]], liney=[[0,0],[-1,-1]],plot_col=4,x_key='power',y_key='PER(%)',\
-extra_key='',xrange=[-120,3,15],yrange=[],limit_label=['Jaanu','Mood'],title='Alok', y=True)
+myplotext(file_path=plot_path,sheet_key='11ax_AveragePower',section_key=["protocol","BandWidth"],\
+linex=[], liney=[],plot_col=0,x_key='TargetTxPower(dBm)',y_key='AvgPwr(dBm)_stream0',\
+extra_key='ChanFreq(MHz)',xrange=[],yrange=[],limit_label=[],title='Alok', y=True)
